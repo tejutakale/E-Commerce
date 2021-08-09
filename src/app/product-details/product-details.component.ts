@@ -7,7 +7,8 @@ interface product{
   product_name: string,
   product_description: string,
   product_img: string,
-  product_price:number
+  product_price:number,
+  product_Quantity:number
 }
 
 @Component({
@@ -18,7 +19,6 @@ interface product{
 })
 export class ProductDetailsComponent implements OnInit {
 id:any;
-Response:any;
 singleproduct:any;
 products:product[] = productData;
   constructor( private route:ActivatedRoute,
@@ -36,26 +36,20 @@ products:product[] = productData;
    this.getProduct();
    console.log("hi" +this.id);
   }
- 
+
+  //let singleproduct = this.ProductService.getProduct(this.id);
   getProduct(){
-   // alert(this.id);
-    // let singleproduct = this.ProductService.getProduct(this.id);
-    // console.log(singleproduct);
-    // console.log();
-    
-   // alert(singleproduct);
-    this.ProductService.getProduct(this.id).subscribe(singleproduct =>{
-     // alert(this.id);
-      this.singleproduct = singleproduct.id;
-      console.log("hi method " +this.id);
-   });
-    
-    
+    this.singleproduct = this.ProductService.getProduct(this.id);
 
- 
+    console.log(this.singleproduct);
+    console.log('singleproduct');
+   
+    // this.ProductService.getProduct(this.id)
+    // .subscribe(singleproduct =>{
+    //   this.singleproduct = singleproduct.id;
+    //   console.log("hi baby" +this.id);
+    // })
 
-}
-
-  
+  }
 
 }

@@ -6,7 +6,8 @@ interface product{
   product_name: string,
   product_description: string,
   product_img: string,
-  product_price:number
+  product_price:number,
+  product_Quantity:number
 }
 
 @Component({

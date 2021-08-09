@@ -10,6 +10,7 @@ import { NgForm } from '@angular/forms';
 export class LoginComponent implements OnInit {
 data:any;
 alert:boolean = false;
+  router: any;
   constructor() { }
 
   ngOnInit(): void {
@@ -19,7 +20,7 @@ alert:boolean = false;
      // alert("Login Successfull");
       console.warn(data);
       this.alert=true;
-    
+      this.router.navigate(['/product']);
   }
 
 }

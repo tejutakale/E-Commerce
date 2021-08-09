@@ -3,7 +3,7 @@
         <div class="col-lg-4 offset-4">
             <div class="card p-3 my-4">
             <form class="row g-3 needs-validation" novalidate #Login="ngForm" (ngSubmit)=onSubmit(Login.value)>
-                <div *ngIf="alert" class="col-12 alert alert-success">Login successful.</div>
+               
                 <div class="col-12">
                     <label for="email" class="form-label">Email</label>
                     <input type="email" email pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email="ngModel" ngModel class="form-control" id="email" name="email" required>
@@ -24,6 +24,7 @@
                 </div>
             </form>
         </div>
+        <div *ngIf="alert" class="col-12 alert alert-success">Login successful.</div>
         </div>
     </div>
 </div>

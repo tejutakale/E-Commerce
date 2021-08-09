@@ -25,12 +25,33 @@ id:any;
 
 
 /** GET hero by id. Will 404 if id not found */
-getProduct(id: number): Observable<product> {
-  const url = `${this.productUrl}/${id}`;
-  console.log(url);
-  return this.http.get<product>(url);
+// getProduct(id: number): Observable<product> {
+//   const url = `${this.productUrl}/${id}`;
+//   console.log(url);
+//   return this.http.get<product>(url);
   
+// }
+
+getProduct(id: number){
+  return productData.find(x => x.id == id)
+  // const url = `${this.productUrl}/${id}`;
+  // const urlw = this.http.get<product>(url);
+  // console.log(productData)
+  // console.log(aa)
+  // console.log('urlw')
 }
+// getProduct(id:number){
+//   return productData.find(x => x.id == id);
+//   // const url = `${this.productUrl}/${id}`;
+//   // const urlw = this.http.get<product>(url);
+//   // console.log(productData)
+//   // console.log(aa)
+//   // console.log('urlw')
+// }
 
   
 }
+function id(id: any, number: any) {
+  throw new Error('Function not implemented.');
+}
+

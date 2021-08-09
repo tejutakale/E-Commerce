@@ -7,27 +7,29 @@
             
             <div class="row">
                 <div class="col-md-4" *ngFor="let product of products; let i = index" >
-                    <div class="card mb-4 product-wap rounded-0" >
-                        <div class="card rounded-0">
-                            <img class="card-img rounded-0 img-fluid" src="{{product.product_img}}">
-                            <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
-                                <ul class="list-unstyled">
-                                    <li><a class="btn btn-success text-white" href="#"><i class="far fa-heart"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" routerLink="../product_details/{{product.id}}"><i class="far fa-eye"></i></a></li>
-                                    <li><a class="btn btn-success text-white mt-2" href="#"><i class="fas fa-cart-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                       
-                            <a href="#" class="h2 text-decoration-none text-dark">{{product.product_name}}</a>
-                            <p class="card-text">
-                                {{product.product_description}}
-                            </p>
-                            <p class="text-muted"> $ {{product.product_price}}</p>
+                    <a class="text-decoration-none" routerLink="../product_details/{{product.id}}">
+                            <div class="card mb-4 product-wap rounded-0" >
+                                <div class="card rounded-0">
+                                    <img class="card-img rounded-0 img-fluid" src="{{product.product_img}}">
+                                    <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                        <ul class="list-unstyled">
+                                            <li><a class="btn btn-success text-white" href="#"><i class="far fa-heart"></i></a></li>
+                                            <li><a class="btn btn-success text-white mt-2" routerLink="../product_details/{{product.id}}"><i class="far fa-eye"></i></a></li>
+                                            <li><a class="btn btn-success text-white mt-2" href="#"><i class="fas fa-cart-plus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                            
+                                    <a href="#" class="h2 text-decoration-none text-dark">{{product.product_name}}</a>
+                                    <!-- <p class="card-text text-dark">
+                                        {{product.product_description}}
+                                    </p> -->
+                                    <p class="text-muted"> $ {{product.product_price}}</p>
 
-                        </div>
-                    </div>
+                                </div>
+                            </div>                     
+                    </a>
                 </div>
                 
                 
