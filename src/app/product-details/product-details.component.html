@@ -1,1 +1,39 @@
-<p>product-details works!</p>
+<section class="bg-light">
+    <div class="container pb-5">
+        <div class="row">
+            <div class="col-lg-5 mt-5">
+                <div class="card mb-3">
+                    <img class="card-img img-fluid" src="{{singleproduct.product_img}}" alt="Card image cap" id="product-detail">
+                </div>
+            
+            </div>
+            <!-- col end -->
+            <div class="col-lg-7 mt-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="h2">{{singleproduct.product_name}}{{id}}</h1>
+                        <p class="h3 py-2">{{singleproduct.product_price}}</p>
+                     
+                  
+                        <h6>Description:</h6>
+                        <p>{{singleproduct.product_description}}</p>
+                 
+              
+
+                        <form action="" method="GET">
+                            <input type="hidden" name="product-title" value="Activewear">
+                         
+                            <div class="row pb-3">
+                              
+                                <div class="col">
+                                    <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Add To Cart {{id}}</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

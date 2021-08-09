@@ -1,0 +1,29 @@
+<div class="container py-5 my-5">
+    <div class="row">
+        <div class="col-lg-4 offset-4">
+            <div class="card p-3 my-4">
+            <form class="row g-3 needs-validation" novalidate #Login="ngForm" (ngSubmit)=onSubmit(Login.value)>
+                <div *ngIf="alert" class="col-12 alert alert-success">Login successful.</div>
+                <div class="col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" email pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" #email="ngModel" ngModel class="form-control" id="email" name="email" required>
+                    <div class="text-danger" *ngIf="email.invalid && email.touched">
+                        Please Enter email id.
+                    </div>
+                
+                </div>
+                <div class="col-12">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" #password="ngModel" ngModel class="form-control" id="password" name="password" required>
+                    <div class="text-danger" *ngIf="password.invalid && password.touched">
+                        Please enter password.
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button [disabled]="!Login.form.valid" class="btn btn-success" type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
